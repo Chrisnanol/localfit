@@ -1,0 +1,13 @@
+rm(list = ls())
+source("C:/Users/ecosystem/Documents/R/local_fit/localfit/R/localfit.R", encoding="UTF-8")
+test_data <- read.csv("C:/Users/ecosystem/Documents/R/local_fit/local_data/test_num.csv",header=T)
+
+result_all1 <- dub_all_fit(source_data=test_data,name_col=1,time_col=2,fit_col=6)
+result_all2 <- dub_all_fit(source_data=result_all1,name_col=1,time_col=2,fit_col=5)
+result_all3 <- dub_all_fit(source_data=result_all2,name_col=1,time_col=2,fit_col=7)
+result_all4 <- dub_all_fit(source_data=result_all3,name_col=1,time_col=2,fit_col=8)
+result_all5 <- dub_all_fit(source_data=result_all4,name_col=1,time_col=2,fit_col=9)
+result_all6 <- dub_all_fit(source_data=result_all5,name_col=1,time_col=2,fit_col=10)
+result_all7 <- dub_all_fit(source_data=result_all6,name_col=1,time_col=2,fit_col=3)
+result_all8 <- dub_all_fit(source_data=result_all7,name_col=1,time_col=2,fit_col=4)
+write.table(result_all8,file="allfit.csv",sep = ",",row.names= FALSE)
